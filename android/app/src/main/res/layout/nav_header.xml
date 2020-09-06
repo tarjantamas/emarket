@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="176dp"
+                                                   android:gravity="bottom"
+                                                   android:background="@color/green"
+                                                   android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_account_circle_white"
+                android:contentDescription="@string/profile_image"
+                app:riv_corner_radius="50dip"
+                android:cropToPadding="false"/>
+        <Space android:layout_width="@dimen/horizontal_spacer_small" android:layout_height="1dp"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/combinedName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintGuide_percent="0.5"/>
+    <TextView
+            android:text="E-Pijaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="30sp" android:textStyle="bold"
+            android:layout_marginStart="10dp" app:layout_constraintBottom_toTopOf="@+id/guideline"
+            android:textColor="@color/white"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="@string/profile"/>
+        <item
+                android:id="@+id/nav_my_companies"
+                android:icon="@drawable/ic_companies"
+                android:title="@string/my_companies"/>
+        <item
+                android:id="@+id/nav_subs_and_favs"
+                android:icon="@drawable/ic_favorite_toolbar"
+                android:title="@string/favorites"/>
+        <item
+                android:id="@+id/nav_browse_products"
+                android:icon="@drawable/ic_store"
+                android:title="@string/browse_products"/>
+        <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings"/>
+        <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/log_out"
+                android:gravity="bottom"/>
+        <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_sign_in"
+                android:title="@string/log_in"/>
+        <item
+                android:id="@+id/nav_register"
+                android:icon="@drawable/ic_register"
+                android:title="@string/register"/>
+        <item
+            android:id="@+id/nav_company_details"
+            android:icon="@drawable/ic_register"
+            android:title="@string/compay_details"/>
+    </group>
+</menu>

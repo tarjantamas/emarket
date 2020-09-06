@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+        <TextView
+                android:text="@string/company_name"
+                style="@style/FormLabel"/>
+        <TextView
+                android:id="@+id/name"
+                style="@style/ContentLabel"/>
+        <Space
+                android:layout_width="1dp"
+                android:layout_height="@dimen/vertical_spacer"/>
+        <TextView
+                android:text="@string/company_description"
+                style="@style/FormLabel"/>
+        <TextView
+                android:id="@+id/description"
+                style="@style/ContentLabel"/>
+        <Space
+                android:layout_width="1dp"
+                android:layout_height="@dimen/vertical_spacer"/>
+        <TextView
+                android:text="@string/company_address"
+                style="@style/FormLabel"/>
+        <TextView
+                android:id="@+id/address"
+                style="@style/ContentLabel"/>
+        <Space
+                android:layout_width="1dp"
+                android:layout_height="@dimen/vertical_spacer"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

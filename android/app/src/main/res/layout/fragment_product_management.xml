@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="10dp">
+        <TextView
+                android:text="@string/name"
+                style="@style/FormLabel"/>
+        <EditText style="@style/FormInput"
+                  android:hint="@string/name"
+                  android:id="@+id/name"/>
+        <Space android:layout_height="@dimen/vertical_spacer" android:layout_width="1dp"/>
+        <TextView
+                android:text="@string/description"
+                style="@style/FormLabel"/>
+        <EditText style="@style/FormInput"
+                  android:hint="@string/description"
+                  android:id="@+id/description"/>
+        <Space android:layout_height="@dimen/vertical_spacer" android:layout_width="1dp"/>
+        <TextView
+                android:text="@string/price"
+                style="@style/FormLabel"/>
+        <EditText style="@style/FormInput"
+                  android:inputType="numberDecimal"
+                  android:hint="@string/price"
+                  android:id="@+id/price"/>
+        <Space android:layout_height="@dimen/vertical_spacer" android:layout_width="1dp"/>
+        <TextView
+                android:text="@string/unit"
+                style="@style/FormLabel"/>
+        <EditText style="@style/FormInput"
+                  android:hint="@string/unit"
+                  android:id="@+id/unit"/>
+        <Space android:layout_height="@dimen/vertical_spacer" android:layout_width="1dp"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/manageImages"
+                android:text="@string/manage_images"
+                style="@style/GreenStrokeButton"/>
+        <Button android:id="@+id/saveButton"
+                android:text="@string/save_product"
+                style="@style/PrimaryButton"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

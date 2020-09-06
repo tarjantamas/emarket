@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:background="@color/lightGrey"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".shop.ShopDetailCompanyTabFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp" android:layout_marginStart="10dp">
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_placeholder"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+            <Space
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/vertical_spacer"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_company"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+            <TextView
+                    android:id="@+id/description"
+                    android:text="@string/lorem_ipsum_medium"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/store_description_size"
+                    android:layout_height="wrap_content"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/subscribeToCompanyButton"
+                    android:text="@string/subscribe_to_company"
+                    style="@style/GreenStrokeButton"/>
+            <com.google.android.material.button.MaterialButton
+                    android:visibility="gone"
+                    android:id="@+id/unsubscribeFromCompanyButton"
+                    android:text="@string/unsubscribe_from_company"
+                    style="@style/GreenStrokeButton"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer_small"/>
+            <Button
+                    android:id="@+id/shopListButton"
+                    android:text="@string/shop_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:padding="@dimen/button_padding"
+                    android:layout_marginLeft="@dimen/button_margin_adjust"
+                    android:layout_marginRight="@dimen/button_margin_adjust"
+                    android:layout_marginTop="@dimen/button_margin_adjust"
+                    android:layout_marginBottom="@dimen/button_margin_adjust"
+                    android:textSize="@dimen/button_text_size"
+                    style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer_small"/>
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/companyManagementButton"
+                    android:text="@string/company_management"
+                    style="@style/GreenStrokeButton"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

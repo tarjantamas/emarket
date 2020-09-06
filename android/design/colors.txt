@@ -1,0 +1,9 @@
+zelena :: #03AD53
+
+kao crna :: #3F3F3F
+
+crvena :: #DF0000
+
+i ovo je tamno plava ona kao za link bila :: #00083E
+
+ovo je android siva mislim :: #727272

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:background="@color/lightGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".shop.ShopDetailFragment">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:fabCustomSize="40dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    tools:ignore="KeyboardInaccessibleWidget"
+                    app:srcCompat="@drawable/favorite_grey"
+                    android:id="@+id/favoriteButton"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintHorizontal_bias="0.958"/>
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/headerImage"
+                    android:layout_height="250dp"
+                    android:layout_width="match_parent"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/shop_header_image"
+                    app:riv_corner_radius_bottom_left="10dip"
+                    app:riv_corner_radius_bottom_right="10dip"
+                    android:cropToPadding="false" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/store_name_size"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:textStyle="bold" android:id="@+id/shopName"/>
+        <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/store_description_size"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:id="@+id/shopDescription"/>
+        <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+        <Button
+                android:id="@+id/productListButton"
+                android:text="@string/product_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:padding="@dimen/button_padding"
+                android:textSize="@dimen/button_text_size"
+                style="?android:attr/borderlessButtonStyle"/>
+        <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+        <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tabLayout">
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_detail_tab_gallery"/>
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_detail_tab_location"/>
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_detail_tab_company"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+</ScrollView>

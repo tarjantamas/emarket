@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".auth.SignInFragment" android:background="@color/lightGrey">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGrey">
+        <TextView
+                android:id="@+id/title"
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="70dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:id="@+id/inputLayout"
+                android:layout_marginEnd="20dp">
+            <EditText style="@style/FormInput"
+                      android:hint="@string/email_address"
+                      android:inputType="textEmailAddress"
+                      android:id="@+id/emailField"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+            <EditText style="@style/FormInput"
+                      android:hint="@string/password"
+                      android:inputType="textPassword"
+                      android:id="@+id/passwordField"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer"/>
+            <Button
+                    android:id="@+id/signInButton"
+                    android:text="@string/sign_in"
+                    style="@style/PrimaryButton"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer_small"/>
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/signUpHereButton"
+                    android:text="@string/sign_up_here"
+                    style="@style/GreenStrokeButton"/>
+            <Space android:layout_width="1dp" android:layout_height="@dimen/vertical_spacer_small"/>
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/skipSignInButton"
+                    android:text="@string/skip_sign_in"
+                    style="@style/WhiteStrokeButton"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
